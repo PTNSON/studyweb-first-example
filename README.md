@@ -56,8 +56,77 @@ http://localhost:8080/swagger-ui/index.html
 
 **cách push code làm việc trong một nhóm**
 
-tạo nhánh kèm tên module, chức năng
+Khởi tạo repository local
+
+```
+git init
+```
+
+Kết nối repo local với github
+
+```
+git remote add origin <URL>
+```
+
+Tạo quan hệ ban đầu với github, các lần sau chỉ cần git push hoặc git pull
+
+```
+git push -u origin main
+```
+
+**Sau khi xong các bước đó thì làm 3 bước sau để đưa code lên github**
+Thêm từng file vào repo
+
+```
+git add <ten file>
+```
+
+Thêm tất cả file vào repo local
+
+```
+git add .
+```
+
+Commit
+
+```
+git commit -m "noi dung commit"
+```
+
+Đưa code lên github
+
+```
+git push
+```
+
+**Các lệnh khác**
+Lấy code về từ url
+
+```
+git clone <URL>
+```
+
+Tạo nhánh kèm tên module, chức năng và chuyển nhánh. Tạo nhánh giúp tách biệt code khỏi nhánh chính của dự án
+để tùy chỉnh code sau đó có thể merge lại vào nhánh chính
 
 ```
 git checkout -b <tên_module>/feature/<tên_tính_năng>
+```
+
+Chuyển nhánh
+
+```
+git checkout <ten nhanh muon chuyen sang>
+```
+
+Tải code về nhưng không merge
+
+```
+git fetch
+```
+
+Tải code về và merge
+
+```
+git pull
 ```
